@@ -1,0 +1,19 @@
+﻿"Updater"
+{
+	"Information"
+	{
+		"Version"
+		{
+			"Latest"	"1.0.0"
+		}
+		"Notes"	"Initial release"
+	}
+
+	"Files"
+	{
+		"Plugin"	"Path_SM/plugins/SourceChatter.smx"
+
+		"Source"	"Path_SM/scripting/SourceChatter.sp"
+		"Source"	"Path_SM/scripting/include/sourcechatter.inc"
+	}
+}

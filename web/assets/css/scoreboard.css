@@ -1,0 +1,44 @@
+.player {
+	margin: 3px;
+	padding: 3px;
+	border: 3px solid;
+	background-color: #ddd;
+	border-radius: 5px;
+	height: 20px;
+}
+
+.player:hover {
+	background-color: white;
+}
+
+.player img {
+	vertical-align: middle;
+	width: 20px;
+	height: 20px;
+}
+
+.player a {
+	padding-left: 10px;
+	text-decoration: none;
+}
+
+.player .profile {
+	float: left;
+	display: flex;
+}
+
+.player .info {
+	float: right;
+}
+
+.player .info span {
+	margin: 10px;
+	text-align: right;
+}
+
+.player .info span .ping {
+	text-decoration: bold;
+	background: #555;
+	padding: 1px;
+	border-radius: 30%;
+}
