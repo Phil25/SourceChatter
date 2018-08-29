@@ -4,13 +4,22 @@
 	{
 		"Version"
 		{
-			"Latest"	"1.0.0"
+			"Latest"	"1.0.1"
+			"Previous"	"1.0.0"
 		}
-		"Notes"	"Initial release"
+
+		"Notes"	"Fixed missing m_iTotalScore error for mods other than tf2"
+		"Notes"	"Removed unnecessary socket dependency"
 	}
 
 	"Files"
 	{
+		"Patch"
+		{
+			"Plugin"	"Path_SM/plugins/SourceChatter.smx"
+			"Source"	"Path_SM/scripting/SourceChatter.sp"
+		}
+
 		"Plugin"	"Path_SM/plugins/SourceChatter.smx"
 
 		"Source"	"Path_SM/scripting/SourceChatter.sp"

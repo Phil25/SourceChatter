@@ -18,7 +18,7 @@
 #include <updater>
 
 
-#define PLUGIN_VERSION	"1.0.0"
+#define PLUGIN_VERSION	"1.0.1"
 
 #define UPDATE_URL	"https://phil25.github.io/SourceChatter/game/addons/sourcemod/updatefile.txt"
 
