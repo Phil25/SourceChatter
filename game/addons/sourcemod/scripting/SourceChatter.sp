@@ -96,6 +96,9 @@ int g_iUserId[MAXPLAYERS+1];
 bool g_bNewName[MAXPLAYERS+1] = {false, ...};
 bool g_bTalking[MAXPLAYERS+1] = {false, ...};
 
+/* Mod-specific stuff */
+char g_sPropScore[32] = "m_iScore";
+
 
 public Plugin myinfo = {
 	name		= "SourceChatter",
@@ -129,6 +132,7 @@ public APLRes AskPluginLoad2(Handle hMyself, bool bLate, char[] sError, int iErr
 
 public void OnPluginStart(){
 	LoadTranslations("common.phrases");
+	SetupModSpecificStuff();
 	RegisterCvars();
 	Database.Connect(Callback_OnConnect, "source_chatter");
 	RegisterCommands();
@@ -143,6 +147,15 @@ public void OnAllPluginsLoaded(){
 public void OnLibraryAdded(const char[] sLibName){
 	if(StrEqual(sLibName, "updater"))
 		Updater_AddPlugin(UPDATE_URL);
+}
+
+/* this function sets up engine-specific properties */
+void SetupModSpecificStuff(){
+	EngineVersion iVersion = GetEngineVersion();
+	switch(iVersion){
+		case Engine_TF2:
+			strcopy(g_sPropScore, sizeof(g_sPropScore), "m_iTotalScore");
+	}
 }
 
 void RegisterCvars(){
@@ -1021,7 +1034,7 @@ int GetClass(int client){
 
 int GetScore(int client){
 	if(g_iResource == -1) return 0;
-	return GetEntProp(g_iResource, Prop_Send, "m_iTotalScore", _, client);
+	return GetEntProp(g_iResource, Prop_Send, g_sPropScore, _, client);
 }
 
 int GetPing(int client){
