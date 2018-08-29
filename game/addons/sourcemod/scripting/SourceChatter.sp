@@ -7,7 +7,6 @@
 
 #include <sourcechatter>
 
-#include <socket>
 #include <sdktools>
 #include <geoip>
 
