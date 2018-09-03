@@ -33,3 +33,7 @@ Source Chatter allows you to monitor and interact with chat and scoreboard of yo
 * Event Scheduler enabled in the database
 
 ## Installation guide, developer information and more are all available in the [AlliedModders thread](https://forums.alliedmods.net/showthread.php?t=310211).
+
+# License [^](#source-chatter)
+The web-panel portion of this project, i.e. everything contained in **web** directory, is licensed under the _MIT License_ - see [LICENSE](LICENSE).
+The SourceMod plugin files, i.e. everything contained in **game** directory, are licensed under the _GPL v3_ License - see [LICENSE-SOURCEMOD](LICENSE-SOURCEMOD).
